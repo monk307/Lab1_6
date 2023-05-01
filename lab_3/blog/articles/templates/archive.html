@@ -6,11 +6,14 @@
 <body>
 <div class="header">
     <img src="{{ STATIC_URL }}static/img/python-django-course.webp" width="100"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}/static/css/article.css">
 </div>
     <div class="archive">
         {% for post in posts %}
         <div class="one-post">
-            <h2 class="post-title">{{ post.title }}</h2>
+            <h2 class="post-title">
+                <a href="http://127.0.0.1:8000/article/{{ post.id }}">{{ post.title }} </a>
+            </h2>
             <div class="article-info">
                 <div class="article-author">{{ post.author.username }}</div>
                 <div class="article-created- date">{{ post.created_date }}</div>
