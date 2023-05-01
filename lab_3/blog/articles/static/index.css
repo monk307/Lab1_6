@@ -1,0 +1,69 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+}
+
+a{
+    color: inherit !important;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+p, h4 {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+ul, ol {
+    margin: 0;
+}
+
+table tr td {
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+img {
+    height: 30px;
+    width: auto;
+}
+
+h1 {
+    Font-family: serif;
+}
+
+.header img {
+    display: block;
+    width: 318px;
+    margin: auto;
+    height: auto;
+}
+
+.archive, .one-post {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-title a {
+    color: #ffffff;
+}
+
+.article-author {
+    width: 50%;
+    float: left;
+}
+
+.article-created-date {
+    text-align: right;
+}
