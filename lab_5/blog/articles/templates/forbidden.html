@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Зарпещено</title>
+    <!--Стили Bootstrap-->
+    
+    <link rel="stylesheet" href="{{ STATIC_URL }}/static/index.css">
+</head>
+<body>
+
+<main>
+    <div class="container">
+        {% include 'blocks/header.html' %}
+        <div class="header">
+            <img src="/{{ STATIC_URL }}static/img/python-django-course.webp" width="100"/>
+        </div>
+        <h1>Зарпещено</h1>
+    </div>
+</main>
+
+<script>
+    setTimeout( () => location.href = '/', 4000)
+</script>
+</body>
+</html>

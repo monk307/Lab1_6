@@ -1,0 +1,7 @@
+<header style="text-align:right">
+    {% if request.user.is_authenticated %}
+    Привет, <b>{{ user.username.title }}</b>!!! <a href="/logout/">Выйти</a>
+    {% else %}
+    <a href="/auth/">Авторизация</a> / <a href="/registration/">Регистрация</a>
+    {% endif %}
+</header>

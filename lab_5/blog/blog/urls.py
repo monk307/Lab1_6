@@ -17,11 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from articles import views
+from django.contrib.auth.views import LogoutView
+from . import settings
 
 urlpatterns = [
     re_path(r'^article/(?P<article_id>\d+)$', views.get_article, name='get_article'),
     path('admin/', admin.site.urls),
     path('', views.archive, name='home'),
     path('article/new/', views.create_post, name='create_post'),
+    
+    # Авторизация и регистрация пользователей
+    path("logout/", LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name="logout"),
+    path("auth/", views.auth, name="auth"),
+    path("registration/", views.registration, name="registration"),
 ]
 

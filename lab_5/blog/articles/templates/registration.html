@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}/static/index.css">
+</head>
+<body>
+<main>
+    <div class="container">
+        {% include 'blocks/header.html' %}
+        <div class="header">
+            <br><br>
+            <img src="/{{ STATIC_URL }}static/img/python-django-course.webp" width="100"/>
+        </div>
+        <div class="content">
+            <br>
+            <h1><b>Регистрация</b></h1>
+            <hr>
+            <form method="POST">
+                {% csrf_token %}
+                <input class="form-control" type="text" name="username" placeholder="Имя пользователя"
+                       value="{{ form.username }}">
+                <br>
+                <input class="form-control" type="email" name="email" placeholder="Email пользователя"
+                       value="{{ form.email }}">
+                <br>
+                <input class="form-control" type="password" name="password" placeholder="Пароль пользователя"
+                       value="{{ form.password }}">
+                <br>
+                <input class="form-control" type="password" name="password_confirm" placeholder="Подтвердите Пароль"
+                       value="{{ form.password_confirm }}">
+                <br>
+                <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+            </form>
+            {{ form.errors }}
+        </div>
+    </div>
+</main>
+</body>
+</html>

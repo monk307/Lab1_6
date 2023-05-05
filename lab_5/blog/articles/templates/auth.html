@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Авторизация</title>
+    
+    <link rel="stylesheet" href="{{ STATIC_URL }}/static/index.css">
+</head>
+<body>
+<main>
+    <div class="container">
+        {% include 'blocks/header.html' %}
+        <div class="header">
+            <br><br>
+            <img src="/{{ STATIC_URL }}static/img/python-django-course.webp" width="100"/>
+        </div>
+        <div class="content">
+            <br>
+            <h1><b>Авторизация</b></h1>
+            <hr>
+            <form method="POST">
+                {% csrf_token %}
+                <input class="form-control" type="text" name="username" placeholder="Имя пользователя"
+                       value="{{ form.username }}">
+                <br>
+                <input class="form-control" type="password" name="password" placeholder="Пароль пользователя"
+                       value="{{ form.password }}">
+                <br>
+                <button class="btn btn-primary" type="submit">Войти</button>
+            </form>
+            {{ form.errors }}
+        </div>
+    </div>
+</main>
+</body>
+</html>
